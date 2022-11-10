@@ -1,0 +1,542 @@
+body {
+  margin: 0;
+  font-size: 0;
+  background-color: #222;
+  font-family: f1;
+}
+@font-face {
+  font-family: f1;
+  src: url("fonts/f1.ttf");
+}
+#header {
+  position: sticky;
+  height: 50px;
+  background-image: linear-gradient(to bottom, #424949, transparent);
+  top: 0;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+#header .out {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#header .btn {
+  display: inline-block;
+  vertical-align: top;
+  font-family: f1;
+  height: 40px;
+  padding: 10px;
+  font-size: 20px;
+  line-height: 25px;
+  color: white;
+  transition-duration: 300ms;
+}
+#header .btn:hover {
+  transform: translateY(-4px) translateX(-4px);
+  color: silver;
+  transition-duration: 300ms;
+  text-shadow: 7px 3px 2px darkred;
+}
+#header .logo {
+  display: inline-block;
+  position: relative;
+  height: 150%;
+}
+#header .logo img {
+  height: 100%;
+}
+#header .left {
+  display: inline-block;
+  vertical-align: top;
+}
+#header .right {
+  display: inline-block;
+  vertical-align: top;
+}
+#content {
+  /*min-height: calc(100vh - 150px);*/
+  text-align: center;
+  width: 100%;
+}
+.block {
+  position: relative;
+}
+.block0 {
+  margin: atuo;
+  width: 100%;
+  z-index: 100;
+}
+.block0 .main-video {
+  width: 100%;
+}
+.main-text {
+  text-align: center;
+  width: 100%;
+  font-size: 24px;
+  color: silver;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+#block1 {
+  /*margin: 50px;*/
+}
+#block1 .list {
+  margin: auto;
+  height: 500px;
+  max-width: 1280px;
+}
+#block1 .list .item {
+  height: 100%;
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  overflow: hidden;
+}
+#block1 #item1 {
+  border-radius: 15px 0px 0px 15px;
+}
+#block1 #item5 {
+  border-radius: 0px 15px 15px 0px;
+}
+#block1 .list .item .bg-img {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  transition-duration: 300ms;
+}
+#block1 .list .item:hover .bg-img {
+  transform: translate(50%, 50%) scale(1.2);
+}
+#block1 .list .item .logo-img {
+  height: 70px;
+  position: absolute;
+  right: 50%;
+  bottom: 20%;
+  transform: translate(50%, 20%);
+  border-style: solid;
+  border-radius: 5px;
+  transition-duration: 300ms;
+}
+#block1 .list:hover .item .logo-img {
+  border-color: darkred;
+  transition-duration: 300ms;
+}
+#block1-frame {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 0;
+  transition-duration: 300ms;
+  transition-property: opacity;
+  pointer-events: none;
+}
+#block1-frame iframe {
+  width: 100%;
+  height: 100%;
+}
+#block1-frame.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+#block1-frame .btn {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background-image: url("img/close.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 1;
+}
+#block2 {
+  text-align: center;
+  /*	height: 700px;*/
+  margin-top: 50px;
+}
+#block2 .case {
+  display: inline-block;
+  vertical-align: top;
+  margin: 30px;
+  width: 20%;
+  padding: 20px;
+}
+#block2 .case .main {
+  font-size: 24px;
+  color: silver;
+  text-shadow: 0 0 5px grey;
+  transition-duration: 300ms;
+  animation-delay: 1s;
+}
+
+#block2 .case .addition {
+  margin-top: 30px;
+  font-size: 18px;
+  color: grey;
+}
+#block2 .case2 {
+  border-right-style: solid;
+  border-left-style: solid;
+  border-right-color: grey;
+  border-left-color: grey;
+}
+#block3 {
+  width: 100%;
+  background-image: url("img/fon1.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 100vh;
+}
+#block3 .fig-text {
+  font-size: 32px;
+  color: white;
+  text-transform: uppercase;
+  padding-top: 70px;
+}
+#block3 .media-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  height: 50px;
+  font-size: 24px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: silver;
+}
+/* Style the tab */
+.tab {
+  padding-top: 20px;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 26px;
+  color: darkgrey;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #1c1c1c;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #121212;
+}
+
+/* Style the tab content */
+.tabcontent {
+  font-size: 20px;
+  margin-top: 20px;
+  display: none;
+  padding: 6px 12px;
+  background-color: #222;
+
+  border-radius: 20px;
+  border-top: none;
+  animation: fadeEffect 1s;
+}
+.tabcontent h3 {
+  text-transform: uppercase;
+  color: silver;
+  text-shadow: 0 0 10px #ffffff;
+}
+
+.tabcontent .tabcontent-describe {
+  display: inline-block;
+  background-image: url("img/body-fon.png");
+  width: 420px;
+  height: 250px;
+  opacity: 0.8;
+  border-radius: 5px;
+}
+.tabcontent .tabcontent-describe iframe {
+  padding-top: 5px;
+  border-radius: 5px;
+}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#block4 {
+  width: 100%;
+}
+.string {
+  width: 100%;
+  background-color: #222;
+  font-size: 24px;
+  margin-top: 10px;
+}
+.string-right {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 30px;
+}
+.string-left {
+  display: inline-block;
+  vertical-align: top;
+}
+.string .big-text {
+  margin-top: 70px;
+  font-size: 28px;
+  width: 600px;
+  color: silver;
+  text-transform: uppercase;
+}
+.string .small-text {
+  text-align: justify;
+  width: 600px;
+  font-size: 24px;
+  color: grey;
+  margin-top: 30px;
+}
+#block5 {
+  width: 100%;
+  height: 500px;
+  text-align: left;
+}
+#block5 .start-game {
+  width: 100%;
+  height: 100%;
+  background-image: url("img/start-game.png");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#block5 .big-text {
+  position: relative;
+  top: 40%;
+  left: 15%;
+  font-size: 28px;
+  text-shadow: 0 0 5px grey;
+  color: silver;
+  text-transform: uppercase;
+}
+#block5 .btn {
+  position: relative;
+  top: 50%;
+  left: 15%;
+  text-align: center;
+  width: 230px;
+  font-size: 24px;
+  color: silver;
+  margin-top: 30px;
+  padding: 15px;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 5px;
+  transition-duration: 300ms;
+}
+#block5 .btn:hover {
+  transition-duration: 300ms;
+  color: #e6433e;
+  border-color: #e6433e;
+  transform: translateY(-10px);
+}
+#block6 {
+  text-align: center;
+  width: 100%;
+  height: 700px;
+  background-image: url("img/tournament.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#block6 .block6-point {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 30px;
+  border-bottom-style: solid;
+  border-bottom-color: silver;
+  padding: 20px;
+  height: 250px;
+  overflow: hidden;
+  transition-duration: 300ms;
+}
+#block6 .block6-point:hover {
+  border-bottom-style: solid;
+  border-bottom-color: #ff3919;
+  transform: scale(1.09);
+  transition-duration: 250ms;
+}
+#block6 #point1 {
+  background-image: url("img/tournament1.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#block6 #point2 {
+  background-image: url("img/tournament2.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#block6 #point3 {
+  background-image: url("img/tournament3.png");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#block6 .block6-point:hover .block6-point-text {
+  background-color: #222;
+  opacity: 0.9;
+  height: 100%;
+  transition-duration: 300ms;
+}
+#block6 .block6-point .block6-point-text-big {
+  font-size: 24px;
+  color: silver;
+  transform: translateY(180px);
+  transition-duration: 300ms;
+}
+#block6 .block6-point .block6-point-text-small {
+  font-size: 16px;
+  color: silver;
+  transform: translateY(250px);
+  transition-duration: 300ms;
+}
+#block6 .block6-point:hover .block6-point-text-big {
+  transform: translateY(50px);
+  transition-duration: 300ms;
+}
+#block6 .block6-point:hover .block6-point-text-small {
+  transform: translateY(90px);
+  transition-duration: 300ms;
+}
+#footer {
+  padding: 50px;
+  text-align: center;
+  background-color: #111;
+}
+#footer #go-up {
+  position: relative;
+  right: 0;
+  font-size: 20px;
+}
+#footer span {
+  font-size: 14px;
+  color: #aaa;
+}
+#footer span a {
+  color: #aaa;
+}
+#footer span a:hover {
+  text-decoration-line: underline;
+}
+#footer #help-ukr {
+  position: relative;
+  left: calc(50% - 115px);
+  width: 230px;
+  font-size: 20px;
+  color: black;
+  margin-top: 10px;
+  background: linear-gradient(
+    0deg,
+    rgba(237, 255, 0, 1) 23%,
+    rgba(64, 64, 233, 1) 60%
+  );
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition-duration: 450ms;
+}
+#footer #help-ukr:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 38%,
+    rgba(255, 0, 0, 1) 97%
+  );
+  color: silver;
+  transition-duration: 1s;
+}
+::-webkit-scrollbar {
+  background-color: #111;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #444;
+}
+@media (max-width: 1000px) {
+  .tabcontent-describe-none {
+    display: none;
+  }
+}
+/*@media(max-width: 1600px){
+	 #header{
+	 	position: fixed;
+	 	right: 50px;
+	 	top: 50px;
+	 	height: 75px;
+	 	padding: 10px;
+	 	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 100%);
+	 	background-image: none;
+	 	background-color: transparent;
+	 	backdrop-filter: blur(5px);
+	 	border-radius: 15px;
+	 }
+	#header::after{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		filter: blur(5px);
+	}
+	#header .logo{
+		height: 100%;
+	}
+	#header .out{
+
+	}
+	#header .left{
+		vertical-align: bottom;
+	}
+	#header .right{
+		display: none;
+
+	}
+	#header .logo{
+
+	}
+	#header .out .left .btn{
+		display: inline-block;
+		vertical-align: top;
+		font-family: f1;
+		height: 40px;
+		padding: 10px;
+		font-size: 20px;
+		color: white;
+		transition-duration: 300ms;
+}
+	#header .out .left .btn:hover{
+		transform: translateY(-4px) translateX(-4px);
+		color: silver;
+		transition-duration: 300ms;
+		text-shadow: 7px 3px 2px darkred;           
+}
+
+*/
